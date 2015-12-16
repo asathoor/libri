@@ -32,6 +32,10 @@ Year=1784}
 
 Is a WordPress plugin. In the Dashboard you can enter new titles and save them to the *libri* table. For the table structure please refer to *libri.sql*.	
 
+# libri-search (WordPress Plugin)
+
+A primitive search form.
+
 ## The BibTex format
 
 On *Bibtex.org* see:

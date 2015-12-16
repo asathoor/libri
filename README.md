@@ -6,8 +6,6 @@ Add a book to a table (Dashboard Widget for WordPress)
 
 #### BibTex
 
-This file will format a sql query as a *BibTex* file. Perhaps a PHP or Python class would do a better job.
-
 The format looks like this if the file is made by Pybliographer:
 
 ~~~~
@@ -19,7 +17,9 @@ The format looks like this if the file is made by Pybliographer:
 }
 ~~~~~
 
-The present plugin will format the bibliography like this:
+# byb.php
+
+*byb.php* will format a booklist like this:
 
 ~~~~~
 @Book{WELL_1784, Author={Welling, G. von},
@@ -27,6 +27,10 @@ Title={Opus Mago-Cabbalisticum et Theosophicum},
 Publisher={Frankfurt und Leipzig},
 Year=1784}
 ~~~~~
+
+# libri.php (WordPress Plugin)
+
+Is a WordPress plugin. In the Dashboard you can enter new titles and save them to the *libri* table. For the table structure please refer to *libri.sql*.	
 
 ## The BibTex format
 

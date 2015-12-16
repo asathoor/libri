@@ -35,46 +35,13 @@ function petj_libri_new(){
 
 		$wpdb->show_errors();
 
-/**
-Array content
-
-		{"forfatter":"hkjjkkjkj",
-		"titel":"hkkjkjhk",
-		"anno":"hhkjkjjkhkj",
-		"where":"hhjkjkjkhjk",
-		"hvor":"kkhkjjkkj",
-		"projekt":"FossCMS",
-		"note":"hjkkjNotat",
-		"ok":"ok"}
-
-			
-
-
-Database structure
-
-	1	Id	int(11)			No	None	AUTO_INCREMENT	 Change Change	 Drop Drop	Show more actions More
-	2	Author	text	latin1_swedish_ci		No	None		 Change Change	 Drop Drop	Show more actions More
-	3	Title	text	latin1_swedish_ci		No	None		 Change Change	 Drop Drop	Show more actions More
-	4	Where	text	latin1_swedish_ci		No	None		 Change Change	 Drop Drop	Show more actions More
-	5	Year	int(4)			No	None		 Change Change	 Drop Drop	Show more actions More
-	6	Note	longtext	latin1_swedish_ci		No	None		 Change Change	 Drop Drop	Show more actions More
-	7	Projekt	tinytext	latin1_swedish_ci		No	None		 Change Change	 Drop Drop	Show more actions More
-	8	Hvor
-
-Sådan
-
-%s = string
-%d = number
-
-**/
-
-$forfatter = addslashes(strip_tags($_REQUEST['forfatter']));
-$titel  = addslashes(strip_tags($_REQUEST['titel']));
-$where = addslashes(strip_tags($_REQUEST['where'])); // trykkested
-$anno = addslashes(strip_tags($_REQUEST['anno']));
-$note = addslashes(strip_tags($_REQUEST['note']));
-$projekt = addslashes(strip_tags($_REQUEST['projekt']));
-$hvor = addslashes(strip_tags($_REQUEST['hvor'])); // fysisk eller url
+		$forfatter = addslashes(strip_tags($_REQUEST['forfatter']));
+		$titel  = addslashes(strip_tags($_REQUEST['titel']));
+		$where = addslashes(strip_tags($_REQUEST['where'])); // trykkested
+		$anno = addslashes(strip_tags($_REQUEST['anno']));
+		$note = addslashes(strip_tags($_REQUEST['note']));
+		$projekt = addslashes(strip_tags($_REQUEST['projekt']));
+		$hvor = addslashes(strip_tags($_REQUEST['hvor'])); // fysisk eller url
 
 		/* insert a book */
 		$wpdb->insert( 
@@ -124,5 +91,4 @@ $hvor = addslashes(strip_tags($_REQUEST['hvor'])); // fysisk eller url
 	</form>
 
 	<?php } // ends the else l. 28.
-}
-
+} // ends petj_libri_new

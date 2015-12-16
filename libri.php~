@@ -34,7 +34,7 @@ function petj_libri_new(){
 		global $wpdb;
 
 		$wpdb->show_errors();
-		print_r($_REQUEST);
+		//print_r($_REQUEST);
 
 		/* sanitize input */
 		$type = addslashes(strip_tags($_REQUEST['bogeller']));

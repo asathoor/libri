@@ -14,7 +14,7 @@ $result = $mysqli->query($sql);
 
 while($row = $result->fetch_assoc()){
      print "\n@Book{" . strtoupper( substr($row['Author'], 0,4)) . "_" . $row['Year']
-     . ", Author={" . $row['Author'] . "},\n"
+     . ",\n Author={" . $row['Author'] . "},\n"
      . "Title={" . $row['Title'] . "},\n"
      . "Publisher={" . $row['Where'] . "},\n"
      . "Year=" . $row['Year'] . "}\n";

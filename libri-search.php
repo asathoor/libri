@@ -31,7 +31,7 @@ function petj_libri_search(){
 		$what = $_REQUEST['what'];
 		$searchfor = $_REQUEST['searchfor'];
 	
-		$sql = "SELECT `Author`,`Title`  FROM `libri` WHERE `".$what."` LIKE '".$searchfor."%'";
+		$sql = "SELECT `Author`, ': \"' , `Title`, '\" (' , `Year` , ').'  FROM `libri` WHERE `".$what."` LIKE '%".$searchfor."%' ORDER BY `Author` ASC";
 		
 		
 		global $wpdb;
@@ -48,16 +48,16 @@ function petj_libri_search(){
 			    echo $ord . " ";
 			}
 			
-			echo  ".</div>";
+			echo  "</div>";
 		}
 
 	
 		?>
-	
+		<div style="padding-top:1.2345em;">
 		<form action="#" method="get" enctype="application/x-www-form-urlencoded">
 			<button name="well" value="wellwell" type="submit">Try again?</button>
 		</form>
-		
+		</div>
 		<?php
 	//print_r($_REQUEST);		
 		
@@ -78,3 +78,4 @@ function petj_libri_search(){
 
 } // ends else clause
 } // ends search function
+
